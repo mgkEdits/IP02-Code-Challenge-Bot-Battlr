@@ -27,11 +27,20 @@ function App () {
         // Add the bot reference to the enlistedBotRefs
         enlistedBotRefs.current[bot.bot_class] = bot;
       };
+
+      const handleReleaseBot = (bot) => {
+        // Remove the bot from enlistedBots
+        const updatedEnlistedBots = enlistedBots.filter((enlistedBot) => enlistedBot.id !== bot.id);
+        setEnlistedBots(updatedEnlistedBots);
+    
+        // Remove the bot reference from enlistedBotRefs
+        delete enlistedBotRefs.current[bot.bot_class];
+      };
     
 
     return (
       <div className='section-main'>
-        <YourBotArmy enlistedBots={enlistedBots} />
+        <YourBotArmy enlistedBots={enlistedBots} onReleaseBot={handleReleaseBot} />
         <BotCollection bots={bots} onEnlistBot={handleEnlistBot}/>
       </div>
     )

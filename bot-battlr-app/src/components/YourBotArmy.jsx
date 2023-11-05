@@ -1,7 +1,7 @@
 import React from 'react'
 import './../styles/yourBotArmy.css'
 
-function YourBotArmy ({enlistedBots}) {
+function YourBotArmy ({enlistedBots, onReleaseBot}) {
 
     return (
       <div className='card-botArmy'>
@@ -10,7 +10,7 @@ function YourBotArmy ({enlistedBots}) {
         </div>
         <div className='armys'>
         { enlistedBots.map((bot) => ( 
-        <div key= {bot.id} className='army-wrapper' onClick={() => onEnlistBot(bot)}>
+        <div key= {bot.id} className='army-wrapper' onClick={() => onReleaseBot(bot)}>
         <div className='army' >
           
             <img className='avatar' src={bot.avatar_url} alt={bot.name}/>
