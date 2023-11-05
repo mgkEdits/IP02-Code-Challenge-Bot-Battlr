@@ -1,9 +1,14 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
+import YourBotArmy from './YourBotArmy'
 
 function Layout () {
 
     return (
-      <div>Layout</div>
+      <div className='section-main'>
+        <YourBotArmy/>
+        <Outlet/>
+      </div>
     )
 }
 
