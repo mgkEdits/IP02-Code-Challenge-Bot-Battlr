@@ -1,24 +1,23 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import BotCollection from './components/BotCollection'
-import BotSpecs from './components/BotSpecs'
-import SortBar from './components/SortBar'
+import { useState, useEffect } from "react";
+import YourBotArmy from './components/YourBotArmy'
+import BotCollection from '././components/BotCollection';
 
+function Layout () {
+    const [bots, setBots] = useState([]);
 
-function App ()  {
-  
+    useEffect(() => {
+        fetch("http://localhost:3000/bots")
+          .then((response) => response.json())
+          .then((data) => setBots(data));
+      }, []);
+
     return (
-     <BrowserRouter>
-       <Routes>
-         <Route path='/' element={<Layout/>}>
-           <Route index element={<BotCollection/>}/>
-           <Route  path='botSpecs' element={<BotSpecs/>}/>
-           <Route  path='sorted-bots' element={<SortBar/>}/>
-         </Route>
-       </Routes>
-     </BrowserRouter>
+      <div className='section-main'>
+        <YourBotArmy/>
+        <BotCollection botArmy={bots}/>
+      </div>
     )
 }
 
-export default App
+export default Layout
