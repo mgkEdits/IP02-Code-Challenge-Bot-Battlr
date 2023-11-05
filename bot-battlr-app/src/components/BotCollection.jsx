@@ -1,27 +1,27 @@
 import React from 'react'
 import './../styles/botCollection.css'
-import Bot from './Bot'
 
-function BotCollection ({botArmy}) {
-    const army = botArmy.map((bot) => (
-        <Bot 
-          key={bot.id} 
-          name ={bot.name}
-          health ={bot.health}
-          damage ={bot.damage}
-          armor ={bot.armor}
-          catchPhrase ={bot.catchphrase} 
-          avatar ={bot.avatar_url}
-        />
-    ));
+function BotCollection ({bots}) {
+    
 
     return (
       <div className='bot-collection'>
         <div className='card-title'>
           <h2>Bots Collection</h2>
         </div>
-        <div className='card-wrap'>
-         {army}
+        <div className='cards'>
+        { bots.map((bot) => ( 
+        <div key= {bot.id} className='card-wrapper'>
+        <div className='card' >
+          <div className='card-content'>
+            <img className='avatar' src={bot.avatar_url}/>
+            <h3>{bot.name}</h3>
+            <p>{bot.catchphrase}</p>
+            <a>🩶{bot.health} | 🪖 {bot.damage} | 🛡️{bot.armor}</a>
+          </div>
+        </div>
+        </div>
+        ))}
         </div>
       </div>
     )

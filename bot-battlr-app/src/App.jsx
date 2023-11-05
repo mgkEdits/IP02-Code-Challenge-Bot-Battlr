@@ -5,6 +5,7 @@ import BotCollection from '././components/BotCollection';
 
 function Layout () {
     const [bots, setBots] = useState([]);
+    const [enlistedBots, setEnlistedBots] = useState([]); 
 
     useEffect(() => {
         fetch("http://localhost:3000/bots")
@@ -14,8 +15,8 @@ function Layout () {
 
     return (
       <div className='section-main'>
-        <YourBotArmy/>
-        <BotCollection botArmy={bots}/>
+        <YourBotArmy enlistedBots={enlistedBots} setEnlistedBots={setEnlistedBots} />
+        <BotCollection bots={bots}/>
       </div>
     )
 }

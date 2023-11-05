@@ -1,13 +1,70 @@
+/* Main container for the bot collection */
 .bot-collection {
     min-height: 350px;
     display: flex;
     flex-direction: column;
     padding: 5px;
-    background-color:#e0e7ed;
+    background-color: #e0e7ed;
     justify-content: space-between;
-    }
-    .card-title {
-        max-height: 50px;
-        justify-content: center;
-    }
-    
+  }
+  
+  /* Cards container */
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows for flexibility in card arrangement */
+    width: 100%;
+  }
+  
+  /* Individual card wrapper */
+  .card-wrap {
+    position: relative;
+    margin: 0.7rem 0.8rem;
+    padding: 50px;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual card */
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 140px;
+    min-height: 150px;
+    background-color: #ffffffe8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  /* Card title */
+  h3 {
+    max-height: 50px;
+    justify-content: center;
+    line-height: 1.4;
+  }
+  
+  /* Card hover effect */
+  .card-wrap:hover .card {
+    transform: translateY(-15px);
+  }
+  
+  /* Card hover effect - additional styling */
+  .card-wrap:hover .card:after {
+    height: 8px;
+  }
+  
+  /* Avatar image */
+  .avatar {
+    width: 200px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Small title inside the card (add more styles if needed) */
+  .card .title-sm {
+    /* Add your styles here */
+  }
+  
