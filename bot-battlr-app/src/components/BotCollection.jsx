@@ -13,12 +13,12 @@ function BotCollection ({bots}) {
         { bots.map((bot) => ( 
         <div key= {bot.id} className='card-wrapper'>
         <div className='card' >
-          <div className='card-content'>
+          
             <img className='avatar' src={bot.avatar_url}/>
             <h3>{bot.name}</h3>
             <p>{bot.catchphrase}</p>
             <a>🩶{bot.health} | 🪖 {bot.damage} | 🛡️{bot.armor}</a>
-          </div>
+          
         </div>
         </div>
         ))}
