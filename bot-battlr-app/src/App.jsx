@@ -15,10 +15,17 @@ function App () {
       }, []);
 
       const handleEnlistBot = (bot) => {
-    
+        if (bot.bot_class in enlistedBotRefs.current) {
+          // You can enlist only one bot from each bot_class
+          alert(`You can enlist only one ${bot.bot_class}`);
+          return;
+        }
         // Add the bot to enlistedBots
         setEnlistedBots([...enlistedBots, bot]);
         console.log(bot)
+
+        // Add the bot reference to the enlistedBotRefs
+        enlistedBotRefs.current[bot.bot_class] = bot;
       };
     
 
