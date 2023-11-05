@@ -1,19 +1,26 @@
 import React from 'react'
 import './../styles/yourBotArmy.css'
 
-function YourBotArmy () {
+function YourBotArmy ({enlistedBots}) {
 
     return (
       <div className='card-botArmy'>
         <div className='card-title'>
           <h2>YourBotArmy</h2>
         </div>
-        <div className='card-wrap'>
-        <div className='bot-card'> 
-        <div className='cardContent'>
-            <img/>
-          </div>
-      </div>
+        <div className='armys'>
+        { enlistedBots.map((bot) => ( 
+        <div key= {bot.id} className='army-wrapper' onClick={() => onEnlistBot(bot)}>
+        <div className='army' >
+          
+            <img className='avatar' src={bot.avatar_url} alt={bot.name}/>
+            <h3>{bot.name}</h3>
+            <p>{bot.catchphrase}</p>
+            <a>🩶{bot.health} | 🪖 {bot.damage} | 🛡️{bot.armor}</a>
+          
+        </div>
+        </div>
+        ))}
         </div>
       </div>
     )

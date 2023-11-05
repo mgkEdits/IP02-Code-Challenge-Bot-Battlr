@@ -1,7 +1,7 @@
 import React from 'react'
 import './../styles/botCollection.css'
 
-function BotCollection ({bots}) {
+function BotCollection ({bots, onEnlistBot }) {
     
 
     return (
@@ -11,10 +11,10 @@ function BotCollection ({bots}) {
         </div>
         <div className='cards'>
         { bots.map((bot) => ( 
-        <div key= {bot.id} className='card-wrapper'>
-        <div className='card' >
+        <div key= {bot.id} className='card-wrapper' onClick={() => onEnlistBot(bot)}>
+        <div className='card'>
           
-            <img className='avatar' src={bot.avatar_url}/>
+            <img className='avatar' src={bot.avatar_url} alt={bot.name}/>
             <h3>{bot.name}</h3>
             <p>{bot.catchphrase}</p>
             <a>🩶{bot.health} | 🪖 {bot.damage} | 🛡️{bot.armor}</a>

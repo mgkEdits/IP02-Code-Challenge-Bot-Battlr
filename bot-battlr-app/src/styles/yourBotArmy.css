@@ -11,3 +11,70 @@ border-color: yellow;
     max-height: 50px;
     justify-content: center;
 }
+.armys {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows for flexibility in card arrangement */
+    width: 100%;
+  }
+  
+  /* Individual card wrapper */
+  .army-wrap {
+    position: relative;
+    margin: 0.7rem 0.8rem;
+    padding: 50px;
+    margin-bottom: 20px;
+    box-shadow: grey;
+  }
+  
+  /* Individual card */
+  .army {
+    position: relative;
+    width: 100%;
+    max-width: 140px;
+    max-height: 200px;
+    background-color: #ffffffe8;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  /* Card title */
+  h3 {
+    max-height: 50px;
+    justify-content: center;
+    line-height: 0.5;
+  }
+  p {
+    justify-content: center;
+    font-size: 10px;
+  }
+  
+  /* Card hover effect */
+  .army-wrap:hover .army {
+    transform: translateY(-15px);
+  }
+  
+  /* Card hover effect - additional styling */
+  .army-wrap:hover .army:after {
+    height: 8px;
+  }
+  
+  /* Avatar image */
+  .avatar {
+    width: 130px;
+    margin-bottom: 0.5rem;
+    align-content: center;
+  }
+  
+  /* Small title inside the card (add more styles if needed) */
+  .army .title-sm {
+    /* Add your styles here */
+  }
+  
