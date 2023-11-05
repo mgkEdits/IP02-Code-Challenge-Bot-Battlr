@@ -1,0 +1,12 @@
+.bot-collection {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color:#e0e7ed;
+    justify-content: space-between;
+    }
+    .card-title {
+        max-height: 50px;
+        justify-content: center;
+    }

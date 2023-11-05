@@ -1,10 +1,13 @@
 import React from 'react'
+import './../styles/botCollection.css'
 
 function BotCollection () {
 
     return (
-      <div>
-        <h2>BotCollection</h2>
+      <div className='bot-collection'>
+      <div className='card-title'>
+      <h2>Bots Collection</h2>
+    </div>
         <div className='card-wrap'>
           <div className='card'> 
             <div className='cardContent'>

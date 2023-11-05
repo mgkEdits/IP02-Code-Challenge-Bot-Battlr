@@ -1,0 +1,13 @@
+.card-botArmy {
+min-height: 350px;
+display: flex;
+flex-direction: column;
+padding: 5px;
+background-color: rgb(25, 138, 25);
+justify-content: space-between;
+border-color: yellow;
+}
+.card-title {
+    max-height: 50px;
+    justify-content: center;
+}
