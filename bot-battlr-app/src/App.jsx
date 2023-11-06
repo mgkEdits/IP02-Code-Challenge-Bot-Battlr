@@ -41,7 +41,7 @@ function App () {
     return (
       <div className='section-main'>
         <YourBotArmy enlistedBots={enlistedBots} onReleaseBot={handleReleaseBot} />
-        <BotCollection bots={bots} onEnlistBot={handleEnlistBot}/>
+        <BotCollection bots={bots} onEnlistBot={handleEnlistBot} setBots={setBots}/>
       </div>
     )
 }

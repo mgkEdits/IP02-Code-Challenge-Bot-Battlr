@@ -1,12 +1,12 @@
 import React from 'react'
 import './../styles/botCollection.css'
 
-function BotCollection ({bots, onEnlistBot }) {
+function BotCollection ({bots, onEnlistBot, setBots}) {
     
   function handleDelete(bot){
     const botId=bot.id;
 
-    fetch("http://localhost:3000/bots/${botId}",{
+    fetch('http://localhost:3000/bots/${botId}',{
       method:"DELETE",
     })
           .then((response) => response.json())
