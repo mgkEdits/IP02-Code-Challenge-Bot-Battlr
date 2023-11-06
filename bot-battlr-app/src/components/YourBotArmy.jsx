@@ -15,6 +15,7 @@ function YourBotArmy ({enlistedBots, onReleaseBot}) {
           
             <img className='avatar' src={bot.avatar_url} alt={bot.name}/>
             <h3>{bot.name}</h3>
+            <h3>{bot.bot_class}</h3>
             <p>{bot.catchphrase}</p>
             <a>🩶{bot.health} | 🪖 {bot.damage} | 🛡️{bot.armor}</a>
           

@@ -31,7 +31,7 @@
     position: relative;
     width: 100%;
     max-width: 140px;
-    max-height: 200px;
+    max-height: 220px;
     background-color: #ffffffe8;
     align-items: center;
     justify-content: center;
@@ -48,7 +48,7 @@
   h3 {
     max-height: 50px;
     justify-content: center;
-    line-height: 0.5;
+    line-height: 0.2;
   }
   p {
     justify-content: center;
@@ -77,3 +77,19 @@
     /* Add your styles here */
   }
   
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 0.25rem 0.9rem;
+    background-color: rgb(235, 85, 85);
+    color: var(--light-one);
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    background-color:red;
+  }
