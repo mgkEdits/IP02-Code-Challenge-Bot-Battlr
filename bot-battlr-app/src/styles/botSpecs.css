@@ -1,0 +1,72 @@
+.bot-specs {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #e0e7ed;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.specs {
+    display: flex;
+    flex-wrap: wrap; /* Allows for flexibility in card arrangement */
+    background-color: #ffffff;
+
+  }
+
+  .img {
+    min-width: 350px;
+    min-height: 400px;
+    margin: 50px;
+  }
+  .avatarr{
+    width: 330px;
+    padding: 30px;
+  }
+  .bot-info{
+    min-width: 350px;
+    background-color: antiquewhite;
+    margin: 50px;
+  }
+  h5 {
+    min-height: 10px;
+    justify-content: center;
+    line-height: 0.2;
+    font-size: 30px;
+  }
+  .btnn {
+    display: inline-block;
+    padding: 0.95rem 1.9rem;
+    background-color: rgb(202, 195, 195);
+    color: var(--light-one);
+    border-radius: 0rem;
+    font-size: 1.55rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .btnn:hover {
+    background-color:rgb(51, 255, 0);
+  }
+  .bttn {
+    display: flex;
+    padding: 0.95rem 1.4rem;
+    background-color: rgb(202, 195, 195);
+    color: var(--light-one);
+    border-radius: 0rem;
+    font-size: 1.55rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .bot-inffo {
+    display: flex;
+    padding: 0.05rem 1.9rem;
+    border-radius: 0rem;
+    font-size: 1.55rem;
+    font-weight: 500;
+    transition: 0.3s;
+    text-align: right;
+  }
